@@ -1,7 +1,7 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
-<a href="https://t.me/z_alexei">Telegram</a>
+<a href="https://t.me/z_alexei">My Telegram</a>
 </p>
 
 ## Проект был выполнен
@@ -20,7 +20,7 @@
 - Валидация форм.
 
 ## Проблемы с которыми столкнулся
-- **Не разобрался как сделать посик по категории и тегу (они лежат в таблице как ID) b и берутся из БД: таблиц - Categories и Tags**
+- **Не разобрался как сделать посик по категории и тегу (они лежат в таблице как ID) и берутся из БД: таблиц - Categories и Tags**
 - **Добавление тега и ссылки к материалу(посту)**
 
 
