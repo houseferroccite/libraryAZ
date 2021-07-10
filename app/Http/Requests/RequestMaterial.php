@@ -27,8 +27,6 @@ class RequestMaterial extends FormRequest
             'type_id'=>'required',
             'category_id'=>'required',
             'name'=>'required|unique:materials,name',
-            'author'=>'required',
-            'description'=>'required',
         ];
     }
     public function messages()

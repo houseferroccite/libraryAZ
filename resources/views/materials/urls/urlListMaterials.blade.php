@@ -8,7 +8,7 @@
         @foreach($material->url as $url)
             <li class="list-group-item list-group-item-action d-flex justify-content-between">
                 <a href="{{$url->URL}}" class="me-3">
-                    {{$url->nameURL}}
+                    {{$url->name}}
                 </a>
                 <span class="text-nowrap">
                             <a href="#" class="text-decoration-none me-2">

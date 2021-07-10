@@ -5,7 +5,7 @@
         <div class="input-group mb-3">
             <select class="form-select" id="tag_id" name="tag_id" aria-label="Добавьте автора">
                 @foreach($tags as $tag)
-                    <option value="{{$tag->id}}">{{$tag->nameTag}}</option>
+                    <option value="{{$tag->id}}">{{$tag->name}}</option>
                 @endforeach
             </select>
             <button class="btn btn-primary" type="submit">Добавить</button>
@@ -15,7 +15,7 @@
         @foreach($material->tag as $item)
             <li class="list-group-item list-group-item-action d-flex justify-content-between">
                 <a href="#" class="me-3">
-                    {{$item->nameTag}}
+                    {{$item->name}}
                 </a>
                 <a href="#" class="text-decoration-none">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
