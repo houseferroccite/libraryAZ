@@ -95,16 +95,15 @@ class MaterialsController extends Controller
      * @param RequestMaterial $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy(RequestMaterial $request)
+    public function destroy(Request $request)
     {
         $materials = Material::findOrFail($request->material_id);
         $materials->delete();
         return redirect()->route('materials');
     }
-    public function search(RequestMaterial $request)
+    public function search(Request $request)
     {
         $s = $request->s;
-        dd($s);
         $materials = Material::where('name', 'LIKE', "%{$s}%")
             ->orWhere('name', 'LIKE', "%{$s}%")
             ->orWhere('author', 'LIKE', "%{$s}%")

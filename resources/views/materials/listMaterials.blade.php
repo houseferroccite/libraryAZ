@@ -6,12 +6,12 @@
         <a class="btn btn-primary mb-4" href="{{route('create.material')}}" role="button">Добавить</a>
         <div class="row">
             <div class="col-md-8">
-                <form method="POST" action="{{route('search')}}">
+                <form method="GET" action="{{route('search')}}">
                     @csrf
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Введите запрос для поиска"
                                aria-label="Example text with button addon" aria-describedby="button-addon1" name="s" value="{{request()->s}}">
-                        <button class="btn btn-primary" type="submit" id="button-addon1">Искать</button>
+                        <button type="submit" class="btn btn-primary" id="button-addon1">Искать</button>
                     </div>
                 </form>
             </div>

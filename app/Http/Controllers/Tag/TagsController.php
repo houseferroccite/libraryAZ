@@ -40,7 +40,7 @@ class TagsController extends Controller
     {
         $params = $request->all();
         Tag::create($params);
-        return redirect()->route('tags');
+        return redirect()->back();
     }
     /**
      * Show the form for editing the specified resource.
@@ -73,7 +73,7 @@ class TagsController extends Controller
      * @param RequestTag $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy(RequestTag $request)
+    public function destroy(Request $request)
     {
         $tags = Tag::findOrFail($request->tag_id);
         $tags->delete();

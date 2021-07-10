@@ -74,7 +74,7 @@ class CategoriesController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy(RequestCategory $request)
+    public function destroy(Request $request)
     {
         $tags = Category::findOrFail($request->cat_id);
         $tags->delete();

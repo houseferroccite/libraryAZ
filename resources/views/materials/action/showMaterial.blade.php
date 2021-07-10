@@ -15,7 +15,7 @@
                 </div>
                 <div class="d-flex text-break">
                     <p class="col fw-bold mw-25 mw-sm-30 me-2">Категория</p>
-                    <p class="col">{{$material->category->nameCategory}}</p>
+                    <p class="col">{{$material->category->name}}</p>
                 </div>
                 <div class="d-flex text-break">
                     <p class="col fw-bold mw-25 mw-sm-30 me-2">Описание</p>

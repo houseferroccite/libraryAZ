@@ -1,6 +1,6 @@
 <div class="col-md-6">
-{{--    <form action="{{route('add.tag')}}" method="POST">--}}
-{{--        @csrf--}}
+    <form action="{{route('add.tag')}}" method="POST">
+        @csrf
         <h3>Теги</h3>
         <div class="input-group mb-3">
             <select class="form-select" id="tag_id" name="tag_id" aria-label="Добавьте автора">
@@ -10,7 +10,7 @@
             </select>
             <button class="btn btn-primary" type="submit">Добавить</button>
         </div>
-{{--    </form>--}}
+    </form>
     <ul class="list-group mb-4">
         @foreach($material->tag as $item)
             <li class="list-group-item list-group-item-action d-flex justify-content-between">
