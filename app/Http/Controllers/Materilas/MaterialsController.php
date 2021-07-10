@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\RequestMaterial;
 use App\Models\Category;
 use App\Models\Material;
+use App\Models\matTag;
+use App\Models\mattags;
 use App\Models\tagMaterial;
 use App\Models\Tag;
 use App\Models\Type;
@@ -88,7 +90,11 @@ class MaterialsController extends Controller
         $material->update($params);
         return redirect()->route('materials');
     }
-
+    public function addMaterialTag(Request $request)
+    {
+        mattags::create($request->all());
+        return redirect()->back();
+    }
     /**
      * Remove the specified resource from storage.
      *
@@ -101,6 +107,7 @@ class MaterialsController extends Controller
         $materials->delete();
         return redirect()->route('materials');
     }
+
     public function search(Request $request)
     {
         $s = $request->s;

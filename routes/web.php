@@ -37,6 +37,7 @@ Route::get('/tagsCreate', [TagsController::class, 'store'])->name('tag.store');
 Route::get('/tagedit/{tag}', [TagsController::class, 'edit'])->name('tag.edit');
 Route::get('/tagupdate/{tag}', [TagsController::class, 'update'])->name('tag.update');
 Route::GET('/addTag', [TagsController::class,'create'])->name('create.tag');
+Route::GET('/addMaterialTag', [MaterialsController::class,'addMaterialTag'])->name('addMaterialTag');
 Route::post('/tagDel', [TagsController::class, 'destroy'])->name('tag.destroy');
 
 Route::get('/addTagMaterial', [MaterialsController::class, 'store'])->name('add.tag');

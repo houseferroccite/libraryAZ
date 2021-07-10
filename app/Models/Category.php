@@ -9,7 +9,7 @@ class Category extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nameCategory','updated_at','created_at',];
+    protected $fillable = ['name','updated_at','created_at',];
 
     public function materials()
     {

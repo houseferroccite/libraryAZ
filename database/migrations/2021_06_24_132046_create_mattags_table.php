@@ -13,10 +13,10 @@ class CreateMaterialTagTable extends Migration
      */
     public function up()
     {
-        Schema::create('material_tag', function (Blueprint $table) {
+        Schema::create('matTag', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('material_id');
-            $table->integer('tag_id');
+            $table->string('tag');
             $table->timestamps();
         });
     }

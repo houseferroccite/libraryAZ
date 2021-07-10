@@ -16,9 +16,9 @@ class Material extends Model
         return $this->belongsTo(Category::class, 'category_id');
     }
 
-    public function tag()
+    public function mattags()
     {
-        return $this->belongsToMany(Tag::class);
+        return $this->hasMany(mattags::class);
     }
 
     public function type()

@@ -1,21 +1,21 @@
 <div class="col-md-6">
-    <form action="{{route('add.tag')}}" method="POST">
-        @csrf
+    <form action="{{route('addMaterialTag')}}" method="GET">
         <h3>Теги</h3>
         <div class="input-group mb-3">
-            <select class="form-select" id="tag_id" name="tag_id" aria-label="Добавьте автора">
+            <input type="text" id="material_id" name="material_id" value="{{$material->id}}" hidden>
+            <select class="form-select" id="tag" name="tag" aria-label="Добавьте автора">
                 @foreach($tags as $tag)
-                    <option value="{{$tag->id}}">{{$tag->name}}</option>
+                    <option value="{{$tag->name}}">{{$tag->name}}</option>
                 @endforeach
             </select>
             <button class="btn btn-primary" type="submit">Добавить</button>
         </div>
     </form>
     <ul class="list-group mb-4">
-        @foreach($material->tag as $item)
+        @foreach($material->mattags as $item)
             <li class="list-group-item list-group-item-action d-flex justify-content-between">
                 <a href="#" class="me-3">
-                    {{$item->name}}
+                    {{$item->tag}}
                 </a>
                 <a href="#" class="text-decoration-none">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

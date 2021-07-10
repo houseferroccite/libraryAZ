@@ -9,7 +9,7 @@ class Tag extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nameTag',];
+    protected $fillable = ['name',];
 
     public function materials()
     {
