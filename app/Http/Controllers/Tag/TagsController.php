@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Tag;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\RequestTag;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 
@@ -32,10 +33,10 @@ class TagsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param RequestTag $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(Request $request)
+    public function store(RequestTag $request)
     {
         $params = $request->all();
         Tag::create($params);
@@ -55,11 +56,11 @@ class TagsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Tag  $tag
+     * @param RequestTag $request
+     * @param \App\Models\Tag $tag
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tag $tag)
+    public function update(RequestTag $request, Tag $tag)
     {
         $params = $request->all();
         $tag->update($params);
@@ -69,10 +70,10 @@ class TagsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Tag  $tag
+     * @param RequestTag $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy(Request $request)
+    public function destroy(RequestTag $request)
     {
         $tags = Tag::findOrFail($request->tag_id);
         $tags->delete();

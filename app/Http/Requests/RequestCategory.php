@@ -24,14 +24,13 @@ class RequestCategory extends FormRequest
     public function rules()
     {
         return [
-            'nameCategory'=>'required|min:10|max:50|unique:categories,nameCategory',
+            'name'=>'required|unique:categories,name',
         ];
     }
     public function messages()
     {
         return [
             'required' => 'Поле :attribute обязательно для заполнения.',
-            'min' => 'Поле :attribute должно иметь минимум :min символа.',
             'unique' => 'Введенный :attribute уже существует, попробуйте другой!',
         ];
     }

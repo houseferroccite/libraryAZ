@@ -26,16 +26,15 @@ class RequestMaterial extends FormRequest
         return [
             'type_id'=>'required',
             'category_id'=>'required',
-            'name'=>'required|min:10|max:50|unique:materials,name',
-            'author'=>'required|min:10|max:50|',
-            'description'=>'required|min:10|max:255|',
+            'name'=>'required|unique:materials,name',
+            'author'=>'required',
+            'description'=>'required',
         ];
     }
     public function messages()
     {
         return [
             'required' => 'Поле :attribute обязательно для заполнения.',
-            'min' => 'Поле :attribute должно иметь минимум :min символа.',
             'unique' => 'Введенный :attribute уже существует, попробуйте другой!',
         ];
     }

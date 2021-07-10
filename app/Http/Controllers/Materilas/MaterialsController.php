@@ -104,6 +104,7 @@ class MaterialsController extends Controller
     public function search(RequestMaterial $request)
     {
         $s = $request->s;
+        dd($s);
         $materials = Material::where('name', 'LIKE', "%{$s}%")
             ->orWhere('name', 'LIKE', "%{$s}%")
             ->orWhere('author', 'LIKE', "%{$s}%")

@@ -25,7 +25,7 @@
                     @endisset
                     @csrf
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" placeholder="Напишите название" id="floatingName" name="nameTag" value="@isset($tag){{ $tag->nameTag }}@endisset">
+                        <input type="text" class="form-control" placeholder="Напишите название" id="floatingName" name="name" value="@isset($tag){{ $tag->name }}@endisset">
                         <label for="floatingName">Название</label>
                         <div class="invalid-feedback">
                             Пожалуйста, заполните поле

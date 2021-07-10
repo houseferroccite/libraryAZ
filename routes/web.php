@@ -23,7 +23,7 @@ Route::get('/materialedit/{material}', [MaterialsController::class, 'edit'])->na
 Route::get('/materialupdate/{material}', [MaterialsController::class, 'update'])->name('material.update');
 Route::GET('/addmaterial', [MaterialsController::class,'create'])->name('create.material');
 Route::post('/materialDel', [MaterialsController::class, 'destroy'])->name('material.destroy');
-Route::POST('/search', [MaterialsController::class,'search'])->name('search');
+Route::post('/search', [MaterialsController::class,'search'])->name('search');
 
 Route::get('/categories', [CategoriesController::class, 'index'])->name('categories');
 Route::get('/categoryCreate', [CategoriesController::class, 'store'])->name('category.store');

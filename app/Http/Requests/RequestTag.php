@@ -24,14 +24,13 @@ class RequestTag extends FormRequest
     public function rules()
     {
         return [
-            'nameType'=>'required|min:10|max:50|unique:types,nameType',
+            'name'=>'required|unique:types,name',
         ];
     }
     public function messages()
     {
         return [
             'required' => 'Поле :attribute обязательно для заполнения.',
-            'min' => 'Поле :attribute должно иметь минимум :min символа.',
             'unique' => 'Введенный :attribute уже существует, попробуйте другой!',
         ];
     }

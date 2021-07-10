@@ -50,7 +50,7 @@
                                             selected
                                         @endif
                                     @endisset
-                                    >{{$category->nameCategory}}
+                                    >{{$category->name}}
                                 </option>
                             @endforeach
                         </select>
