@@ -13,7 +13,7 @@
                     @foreach($categories as $category)
                     <li class="list-group-item list-group-item-action d-flex justify-content-between">
                             <span class="me-3">
-                                {{$category->nameCategory}}
+                                {{$category->name}}
                             </span>
                         <span class="text-nowrap">
                             <a href="{{route('category.edit',$category->id)}}" class="text-decoration-none me-2">

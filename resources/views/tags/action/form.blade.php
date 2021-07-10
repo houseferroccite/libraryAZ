@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @isset($tag)
-    @section('title', 'Редактировать тег ' . $tag->nameTag)
+    @section('title', 'Редактировать тег ' . $tag->name)
 @else
     @section('title', 'Создать тег')
 @endisset

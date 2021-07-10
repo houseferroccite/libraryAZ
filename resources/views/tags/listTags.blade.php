@@ -13,7 +13,7 @@
                     @foreach($tags as $tag)
                         <li class="list-group-item list-group-item-action d-flex justify-content-between">
                             <span class="me-3">
-                                {{$tag->nameTag}}
+                                {{$tag->name}}
                             </span>
                             <span class="text-nowrap">
                             <a href="{{route('tag.edit',$tag->id)}}" class="text-decoration-none me-2">

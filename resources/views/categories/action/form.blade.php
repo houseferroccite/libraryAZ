@@ -24,9 +24,9 @@
                     @endisset
                     @csrf
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" placeholder="Напишите название" id="nameCategory" name="nameCategory" value="@isset($category){{ $category->nameCategory }}@endisset">
+                        <input type="text" class="form-control" placeholder="Напишите название" id="name" name="name" value="@isset($category){{ $category->nameCategory }}@endisset">
                         <label for="floatingName">Название</label>
-                        @include('error', ['fieldName' => 'nameCategory'])
+                        @include('error', ['fieldName' => 'name'])
                     </div>
                     <button class="btn btn-primary" type="submit">Добавить</button>
                 </form>

@@ -20,8 +20,6 @@ class CreateMaterialsTable extends Migration
             $table->text('author')->nullable();
             $table->integer('type_id')->nullable();
             $table->integer('category_id')->nullable();
-            $table->integer('tag_id')->nullable();
-            $table->integer('url_id')->nullable();
             $table->longText('description')->nullable();
             $table->timestamps();
         });

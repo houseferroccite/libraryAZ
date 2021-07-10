@@ -33,7 +33,7 @@
                     <td><a href="{{route('materials.show',$material)}}">{{$material->name}}</a></td>
                     <td>{{$material->author}}</td>
                     <td>{{$material->type->nameType}}</td>
-                    <td>{{$material->category->nameCategory}}</td>
+                    <td>{{$material->category->name}}</td>
                     <td class="text-nowrap text-end">
                         <a href="{{route('material.edit',$material->id)}}" class="text-decoration-none me-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
